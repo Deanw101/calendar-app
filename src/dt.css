@@ -16,7 +16,7 @@
     margin-top: 0; }
   .rdt input.form-control {
     border: 0;
-    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
+    background-image: linear-gradient(#000, #000), linear-gradient(#d2d2d2, #d2d2d2);
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
     background-position: center bottom, center calc(100% - 1px);
@@ -38,7 +38,7 @@
     color: #555; }
   .rdt input.form-control:focus {
     outline: none;
-    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
+    background-image: linear-gradient(#000, #000), linear-gradient(#d2d2d2, #d2d2d2);
     background-size: 100% 2px, 100% 1px;
     box-shadow: none;
     transition-duration: 0.3s; }
@@ -115,7 +115,7 @@
   padding: 0px;
   border-radius: 50%; }
   .rdtDay.rdtToday.rdtActive, .rdtDay.rdtActive, .rdtDay.rdtActive:hover {
-    background-color: #9c27b0 !important;
+    background-color: #000 !important;
     color: #fff;
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(156, 39, 176, 0.6); }
 
@@ -185,10 +185,10 @@
   color: #495057; }
 
 .rdtPicker .rdtTimeToggle {
-  color: #9c27b0; }
+  color: #000; }
 
 .rdtPicker .rdtTime th.rdtSwitch {
-  color: #9c27b0; }
+  color: #000; }
 
 .rdtPrev span,
 .rdtNext span {
@@ -264,9 +264,9 @@ td.rdtYear:hover {
     border: 1px solid transparent; }
 
 /* .rdtCounters .rdtCounter:last-child .rdtCount {
-  color: #9c27b0;
+  color: #000;
   border-radius: 50%;
-  border: 1px solid #9c27b0; } */
+  border: 1px solid #000; } */
 
   .rdtCount {
   display: inline;
@@ -282,7 +282,7 @@ td.rdtYear:hover {
   cursor: pointer;
   display: block;
   border-radius: 50%;
-  color: #9c27b0;
+  color: #000;
   -webkit-transition: all 60ms ease-in;
   -moz-transition: all 60ms ease-in;
   -o-transition: all 60ms ease-in;
@@ -336,5 +336,5 @@ td.rdtYear:hover {
     .rdtMonths .rdtYear.rdtActive,
     .rdtYears .rdtMonth.rdtActive,
     .rdtYears .rdtYear.rdtActive {
-      background-color: #9c27b0 !important;
+      background-color: #000 !important;
       color: #fff; }

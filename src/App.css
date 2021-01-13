@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  z-index: -3;
+  /* / z-index: -3;  */
   background-color:white!important;
 
 }
@@ -22,7 +22,7 @@
   left: 50%;
   width: 90%;
   top: 45%;
-  z-index: 4;
+ z-index: 4;
 }
 
 .review-text-front h1 {
@@ -53,7 +53,7 @@
   left: 50%;
   width: 90%;
   top: 45%;
-  z-index: -2;
+ z-index: 0;
 }
 
 .review-text-back h1 {
@@ -78,7 +78,6 @@
 
 .middleskew {
   background: #fff;
-  z-index: 3;
   position: relative;
   transform: translate(-50%, -50%) skew(20deg);
   -webkit-transform: translate(-50%, -50%) skew(20deg);
@@ -90,10 +89,51 @@
   height: 80vh;
   width: 20vw;
   top: 50vh;
+  z-index: 0;
 }
 
 .heading-text {
 
+}
+
+.afi {
+  /* z-index: 99!important; */
+}
+.afi input {
+  border: 0;
+    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: rgba(0, 0, 0, 0);
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: 400;
+    width: 100%;
+    height: 36px;
+    padding: 7px 0;
+    font-size: 14px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.42857;
+    display: block;
+    width: 100%;
+    color: #555;
+    /* z-index: 99!important; */
+}
+
+.afi input:focus {
+  outline: none;
+    background-image: linear-gradient(#000, #000), linear-gradient(#d2d2d2, #d2d2d2);
+    background-size: 100% 2px, 100% 1px;
+    box-shadow: none;
+    transition-duration: 0.3s;
+}
+
+.MainForm {
+  /* z-index: 99!important; */
 }
 
 * {
