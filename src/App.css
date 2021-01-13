@@ -1,6 +1,6 @@
 .review-head {
   position: relative;
-  height: 100vh;
+  height: 200vh;
   overflow: hidden;
   /* / z-index: -3;  */
   background-color:white!important;
@@ -21,7 +21,7 @@
   text-align: center;
   left: 50%;
   width: 90%;
-  top: 45%;
+  top: 25%;
  z-index: 4;
 }
 
@@ -52,7 +52,7 @@
   text-align: center;
   left: 50%;
   width: 90%;
-  top: 45%;
+  top: 25%;
  z-index: 0;
 }
 
@@ -67,8 +67,12 @@
   transform: translateY(-25vh);
 }
 
+.Fifty {
+  width: 75%;
+}
+
 .logo {
-  position: fixed;
+  position: absolute;
   margin-top: 10vh;
   width: 50px;
   height: 50px;
@@ -133,9 +137,52 @@
 }
 
 .MainForm {
-  /* z-index: 99!important; */
+
+    border-radius: .25rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-color: var(--eg208d,#fff);
+    color: var(--1b1jkoo,inherit);
+    background-clip: padding-box;
+    border: 0;
+    outline: 0;
+    top: 33vh;
+    margin: 40px;
 }
 
+.FormInput {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.FormText {
+  padding-bottom: 10px;
+  padding-left:20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.FormSubmit {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.FormSubmit button {
+
+  color: #000;
+  background-color: #FFF;
+  border: 0.1em solid #000;
+  border-radius:0.12em;
+  padding:0.7em 1.2em;
+ margin:0 0.3em 0.3em 0;
+ box-sizing: border-box;
+ text-decoration:none;
+ font: 700 13px Arial;
+ text-align:center;
+
+}
 * {
   padding: 0;
   margin: 0;

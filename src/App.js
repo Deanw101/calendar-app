@@ -31,33 +31,49 @@ function App() {
               </div>
               </div>
 
+              <button onClick={handleBack}>Back</button>
+
               <div className="row">
-              <div className="col-xl-6"> </div>
-              <div className="App MainForm col-xl-6">
-                <button onClick={handleBack}>Back</button>
-                <div className="afi">
+
+              <div className="App MainForm offset-xl-6 col-xl-6">
+                <form>
+                <span className="FormText">Your Details</span>
+                <div className="afi FormInput Fifty">
                   <input type="text" name="fname" placeholder="First Name"/>
                 </div>
-                <div className="afi">
+                <div className="afi FormInput Fifty">
                   <input type="text" name="lname" placeholder="Last Name"/>
                 </div>
 
-                <div className="afi">
+                <div className="afi FormInput">
+                  <input type="text" id="root_phone" placeholder="Phone Number"/>
+                </div>
+                <span className="FormText">Shoot Location</span>
+                <div className="afi FormInput">
                   <input type="text" id="street_number" placeholder="Address"/>
                 </div>
 
-                <div className="afi">
-                  <input type="text" id="root_phone" placeholder="Phone Number"/>
+                <div className="afi FormInput">
+                  <input type="text" id="Postal-Code" placeholder="City"/>
                 </div>
 
-                <div className="afi">
-                  <input type="text" id="Postal-Code" placeholder="Phone Number"/>
+                <div className="afi FormInput">
+                  <input type="text FormInput" id="Postal-Code" placeholder="State"/>
                 </div>
 
+                <div className="afi FormInput">
+                  <input type="text" id="Postal-Code" placeholder="Postal Code"/>
+                </div>
+                <span className="FormText">Shoot Date and Time</span>
+                <div className="FormInput">
                 <Datetime
-                inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM' }}
+                inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM'}}
                  />
-                <button>Submit</button>
+                </div>
+                <div className="FormSubmit">
+                  <button href="#">Submit</button>
+                </div>
+                </form>
               </div>
                </div>
 
