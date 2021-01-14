@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+ import 'bootstrap/dist/css/bootstrap.min.css';
 import Datetime from "react-datetime";
 import './dt.css';
 import './App.css';
@@ -31,11 +31,15 @@ function App() {
               </div>
               </div>
 
-              <button onClick={handleBack}>Back</button>
-
               <div className="row">
 
-              <div className="App MainForm offset-xl-6 col-xl-6">
+
+
+              <div className="col-xl-5">
+              </div>
+
+
+              <div className="App MainForm col-xl-5">
                 <form>
                 <span className="FormText">Your Details</span>
                 <div className="afi FormInput Fifty">
@@ -76,6 +80,10 @@ function App() {
                 </form>
               </div>
                </div>
+
+
+
+
 
             </div>
       </div>

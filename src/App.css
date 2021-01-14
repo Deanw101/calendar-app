@@ -68,7 +68,7 @@
 }
 
 .Fifty {
-  width: 75%;
+  /* width: 75%; */
 }
 
 .logo {
@@ -136,6 +136,8 @@
     transition-duration: 0.3s;
 }
 
+  /* // <button onClick={handleBack}>Back</button> */
+
 .MainForm {
 
     border-radius: .25rem;
@@ -156,6 +158,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .FormText {
