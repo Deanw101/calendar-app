@@ -44,7 +44,7 @@ export default function SubmitedForm (props) {
 
     <div className="FormSubmit">
       <button >Submit</button>
-      <button className="backTo">Back to Bookings</button>
+      <button className="backTo" href="http://deanwithers.com/bookings.html">Back to Bookings</button>
     </div>
     <span className="FormTextSubmitted">Your shoot has been booked!</span>
 
