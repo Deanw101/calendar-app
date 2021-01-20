@@ -1,6 +1,100 @@
+
+
+.exBold {
+  color: rgba(0,0,0,0.9);
+  font-weight: 600;
+}
+
+.silver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  z-index: 5;
+  box-sizing: border-box;
+  top: 53vh;
+    position: relative;
+  }
+
+.silver h2 {
+  font-weight: 800;
+  position: relative;
+  /* top: -10px;
+  right: 30px; */
+  font-size: 7em;
+  color: rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.silver h3{
+      font-size: 1.8em;
+      color: rgba(0,0,0,0.7);
+      /* transistion: 0.5s; */
+      z-index: 1;
+      font-weight: 700;
+      text-transform: capitalize;
+      }
+
+.silver p{
+  text-align: center;
+  font-weight: 600;
+        font-size: 22px;
+        text-transform: capitalize;
+        color: rgba(0,0,0,0.5);
+        /* transistion: 0.5s; */
+        z-index: 1;
+        line-height: 1.6;
+        }
+
+        .silver-mobile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          max-width: 100%;
+          z-index: 5;
+          box-sizing: border-box;
+          top: 300px;
+            position: relative;
+            margin-bottom: 40px;
+            margin-top: 40px;
+          }
+
+        .silver-mobile h2 {
+          font-weight: 800;
+          position: relative;
+          /* top: -10px;
+          right: 30px; */
+          font-size: 7em;
+          color: rgba(0,0,0,0.1);
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .silver-mobile h3{
+              font-size: 1.8em;
+              color: rgba(0,0,0,0.7);
+              /* transistion: 0.5s; */
+              z-index: 1;
+              font-weight: 700;
+              text-transform: capitalize;
+              }
+
+        .silver-mobile p{
+          text-align: center;
+          font-weight: 600;
+                font-size: 22px;
+                text-transform: capitalize;
+                color: rgba(0,0,0,0.5);
+                /* transistion: 0.5s; */
+                z-index: 1;
+                line-height: 1.6;
+                }
+
+
 .review-head {
   position: relative;
-  height: 200vh;
+  height: 150vh;
   overflow: hidden;
   /* / z-index: -3;  */
   background-color:white!important;
@@ -9,6 +103,18 @@
 
 .review-head .container {
   position: relative;
+}
+.review-head-mobile {
+position: relative;
+height: 1500px;
+overflow: hidden;
+/* / z-index: -3;  */
+background-color:white!important;
+
+}
+
+.review-head .container {
+position: relative;
 }
 
 .review-text-front {
@@ -39,6 +145,9 @@
   background-color: white;
 }
 
+.backTo {
+  float: right;
+}
 .cowhite {
   color: black!important;
 }
@@ -52,7 +161,7 @@
   text-align: center;
   left: 50%;
   width: 90%;
-  top: 25%;
+  top: 45vh;
  z-index: 0;
 }
 
@@ -165,6 +274,15 @@
   padding-bottom: 10px;
   padding-left:20px;
   font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.FormTextSubmitted {
+  padding-bottom: 10px;
+  color: green;
+  padding-left:20px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
 }

@@ -4,6 +4,10 @@ import './App.css';
 import Logo from './assets/logo.png';
 import Form from './form.jsx';
 import Silver from './Silver.jsx';
+import Gold from './Gold.jsx';
+import Platinum from './Platinum.jsx';
+import Diamond from './Diamond.jsx';
+import SubmitedForm from './SubmitedForm.jsx'
 import {useState} from "react";
 function App() {
 
@@ -25,14 +29,14 @@ const hash = window.location.hash
 
     <>
     <div>
-    <div className="logo">
+    <div className="logo d-none d-lg-block">
               <a className="load-spiral" href="index.html">
                 <img src={Logo} />
               </a>
             </div>
 
 
-      <div className="review-head">
+      <div className="review-head d-none d-lg-block">
 
         <div className="heading-text">
 
@@ -45,13 +49,16 @@ const hash = window.location.hash
 
 
 
-              <div className="col-xl-5">
+              <div className="col-xl-5 col-lg-5">
               {hash == '#silver' ? <Silver />: null}
+              {hash == '#gold' ? <Gold />: null}
+              {hash == '#platinum' ? <Platinum />: null}
+              {hash == '#diamond' ? <Diamond />: null}
               </div>
 
 
-              <div className="App MainForm col-xl-5">
-              {showSuccess ? <h5>Success!</h5>: <Form handleSubmit={handleSubmit} />}
+              <div className="App MainForm col-xl-5 col-lg-5">
+              {showSuccess ? <SubmitedForm />: <Form handleSubmit={handleSubmit} />}
 
               </div>
                </div>
@@ -61,6 +68,39 @@ const hash = window.location.hash
 
 
             </div>
+
+            <div className="review-head-mobile d-md-block d-lg-none">
+
+              <div className="heading-text">
+
+                  <div className="review-text-back">
+                    <h1>MAKE THE DATE. YOU'RE ONLY CLICKS <br /> AWAY FROM AN UNFORGETTABLE SHOOT.</h1>
+                    </div>
+                    </div>
+
+                    <div className="row">
+
+
+
+                    <div className="col-md-12">
+                    {hash == '#silver' ? <Silver />: null}
+                    {hash == '#gold' ? <Gold />: null}
+                    {hash == '#platinum' ? <Platinum />: null}
+                    {hash == '#diamond' ? <Diamond />: null}
+                    </div>
+
+
+                    <div className="App MainForm col-md-12">
+                    {showSuccess ? <SubmitedForm />: <Form handleSubmit={handleSubmit} />}
+
+                    </div>
+                     </div>
+
+
+
+
+
+                  </div>
       </div>
 
     </>
