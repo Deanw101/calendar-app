@@ -1,19 +1,29 @@
- import 'bootstrap/dist/css/bootstrap.min.css';
-import Datetime from "react-datetime";
+ import 'bootstrap/dist/css/bootstrap.min.css'
 import './dt.css';
 import './App.css';
 import Logo from './assets/logo.png';
+import Form from './form.jsx';
+import Silver from './Silver.jsx';
+import {useState} from "react";
 function App() {
+
+  const [showSuccess, setShowSuccess] = useState (false);
+
+  const handleSubmit = (data) => {
+    console.log(data)
+    setShowSuccess (true)
+  }
 
   const handleBack = () => {
     window.history.back()
   }
 
+const hash = window.location.hash
+
+
   return (
 
     <>
-
-
     <div>
     <div className="logo">
               <a className="load-spiral" href="index.html">
@@ -36,48 +46,13 @@ function App() {
 
 
               <div className="col-xl-5">
+              {hash == '#silver' ? <Silver />: null}
               </div>
 
 
               <div className="App MainForm col-xl-5">
-                <form>
-                <span className="FormText">Your Details</span>
-                <div className="afi FormInput Fifty">
-                  <input type="text" name="fname" placeholder="First Name"/>
-                </div>
-                <div className="afi FormInput Fifty">
-                  <input type="text" name="lname" placeholder="Last Name"/>
-                </div>
+              {showSuccess ? <h5>Success!</h5>: <Form handleSubmit={handleSubmit} />}
 
-                <div className="afi FormInput">
-                  <input type="text" id="root_phone" placeholder="Phone Number"/>
-                </div>
-                <span className="FormText">Shoot Location</span>
-                <div className="afi FormInput">
-                  <input type="text" id="street_number" placeholder="Address"/>
-                </div>
-
-                <div className="afi FormInput">
-                  <input type="text" id="Postal-Code" placeholder="City"/>
-                </div>
-
-                <div className="afi FormInput">
-                  <input type="text FormInput" id="Postal-Code" placeholder="State"/>
-                </div>
-
-                <div className="afi FormInput">
-                  <input type="text" id="Postal-Code" placeholder="Postal Code"/>
-                </div>
-                <span className="FormText">Shoot Date and Time</span>
-                <div className="FormInput">
-                <Datetime
-                inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM'}}
-                 />
-                </div>
-                <div className="FormSubmit">
-                  <button href="#">Submit</button>
-                </div>
-                </form>
               </div>
                </div>
 
