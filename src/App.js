@@ -29,11 +29,7 @@ const hash = window.location.hash
 
     <>
     <div>
-    <div className="logo d-none d-lg-block">
-              <a className="load-spiral" href="index.html">
-                <img src={Logo} />
-              </a>
-            </div>
+    
 
 
       <div className="review-head d-none d-lg-block">
