@@ -1,5 +1,9 @@
 import Datetime from "react-datetime";
 
+const handleBack = () => {
+  window.history.back()
+}
+
 export default function SubmitedForm (props) {
 
   return (
@@ -44,7 +48,7 @@ export default function SubmitedForm (props) {
 
     <div className="FormSubmit">
       <button >Submit</button>
-      <button className="backTo" href="http://deanwithers.com/bookings.html">Back to Bookings</button>
+      <button className="backTo" onClick={handleBack}>Back to Bookings</button>
     </div>
     <span className="FormTextSubmitted">Your shoot has been booked!</span>
 
