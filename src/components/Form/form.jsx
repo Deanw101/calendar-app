@@ -1,18 +1,29 @@
 import Datetime from "react-datetime";
 import {useState} from "react";
 
+const defaultState = {
+  fname: "",
+  lname: "",
+  root_phone: "",
+  street_number: "",
+  city: "",
+  state: "",
+  postal_code: "",
+  datetime: "",
+}
+
+function InputField(props) {
+
+  const { id, handleChange, placeholder } = props;
+  return (
+    <div className="afi FormInput Fifty">
+      <input type="text" id={id} onChange={handleChange} placeholder={placeholder}/>
+    </div>
+  )
+}
+
 export default function Form (props) {
-  const {handleSubmit} = props
-  const defaultState = {
-    fname: "",
-    lname: "",
-    root_phone: "",
-    street_number: "",
-    city: "",
-    state: "",
-    postal_code: "",
-    datetime: "",
-  }
+  const {handleSubmit} = props;
 
   const [state, setState] = useState (defaultState);
 
@@ -23,57 +34,69 @@ export default function Form (props) {
     })
   }
 
-const handleClick = (event) => {
-event.preventDefault ()
-handleSubmit (state)
-}
+  const handleClick = (event) => {
+    event.preventDefault ()
+    handleSubmit (state)
+  }
 
 
   return (
     <form>
-    <span className="FormText">Your Details</span>
-    <div className="afi FormInput Fifty">
-      <input type="text" id="fname" onChange={handleChange} placeholder="First Name"/>
-    </div>
+      <span className="FormText">Your Details</span>
 
-    <div className="afi FormInput Fifty">
-      <input type="text" id="lname" onChange={handleChange} placeholder="Last Name"/>
-    </div>
+      <InputField
+        id="fname"
+        handleChange={handleChange}
+        placeholder="First Name"
+      />
+      <InputField
+        id="lname"
+        handleChange={handleChange}
+        placeholder="Last Name"
+      />
+      <InputField
+        id="root_phone"
+        handleChange={handleChange}
+        placeholder="Phone Number"
+      />
 
-    <div className="afi FormInput">
-      <input type="text" id="root_phone" onChange={handleChange} placeholder="Phone Number"/>
-    </div>
+      <span className="FormText">Shoot Location</span>
+      
+      <InputField
+        id="street_number"
+        handleChange={handleChange}
+        placeholder="Address"
+      />
+      <InputField
+        id="city"
+        handleChange={handleChange}
+        placeholder="City"
+      />
+      <InputField
+        id="state"
+        handleChange={handleChange}
+        placeholder="State"
+      />
+      <InputField
+        id="postal_code"
+        handleChange={handleChange}
+        placeholder="Zip Code"
+      />
 
-    <span className="FormText">Shoot Location</span>
+      <span className="FormText">Shoot Date and Time</span>
 
-    <div className="afi FormInput">
-      <input type="text" id="street_number" onChange={handleChange} placeholder="Address"/>
-    </div>
+      <div className="FormInput">
+        <Datetime
+          inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM'}}
+        />
+      </div>
 
-    <div className="afi FormInput">
-      <input type="text" id="city" onChange={handleChange} placeholder="City"/>
-    </div>
-
-    <div className="afi FormInput">
-      <input type="text FormInput" id="state" onChange={handleChange} placeholder="State"/>
-    </div>
-
-    <div className="afi FormInput">
-      <input type="text" id="postal_code" onChange={handleChange} placeholder="Postal Code"/>
-    </div>
-    <span className="FormText">Shoot Date and Time</span>
-
-    <div className="FormInput">
-    <Datetime
-    inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM'}}
-     />
-    </div>
-
-    <div className="FormSubmit">
-      <button onClick={handleClick}>Submit</button>
-    </div>
+      <div className="FormSubmit">
+        <button onClick={handleClick}>Submit</button>
+      </div>
 
     </form>
+
   )
 
 }
