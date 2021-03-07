@@ -3,12 +3,10 @@ import './assets/dt.css';
 import './App.css';
 // import Logo from './assets/logo.png';
 import Form from './components/Form/form.jsx';
-import Silver from './components/Cards/Silver.jsx';
-import Gold from './components/Cards/Gold.jsx';
-import Platinum from './components/Cards/Platinum.jsx';
-import Diamond from './components/Cards/Diamond.jsx';
+import PackageCard from './components/Cards/PackageCard.jsx';
 import SubmitedForm from './components/Form/SubmitedForm.jsx'
 import {useState} from "react";
+
 function App() {
 
   const [showSuccess, setShowSuccess] = useState (false);
@@ -21,8 +19,6 @@ function App() {
   // const handleBack = () => {
   //   window.history.back()
   // }
-
-const hash = window.location.hash
 
 
   return (
@@ -45,10 +41,7 @@ const hash = window.location.hash
 
 
               <div className="col-xl-5 col-lg-5">
-              {hash === '#silver' ? <Silver />: null}
-              {hash === '#gold' ? <Gold />: null}
-              {hash === '#platinum' ? <Platinum />: null}
-              {hash === '#diamond' ? <Diamond />: null}
+              <PackageCard />
               </div>
 
 
@@ -78,10 +71,7 @@ const hash = window.location.hash
 
 
                     <div className="col-md-12">
-                    {hash === '#silver' ? <Silver />: null}
-                    {hash === '#gold' ? <Gold />: null}
-                    {hash === '#platinum' ? <Platinum />: null}
-                    {hash === '#diamond' ? <Diamond />: null}
+                    <PackageCard />
                     </div>
 
 
