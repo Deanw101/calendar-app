@@ -1,13 +1,13 @@
- import 'bootstrap/dist/css/bootstrap.min.css'
-import './dt.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/dt.css';
 import './App.css';
-import Logo from './assets/logo.png';
-import Form from './form.jsx';
-import Silver from './Silver.jsx';
-import Gold from './Gold.jsx';
-import Platinum from './Platinum.jsx';
-import Diamond from './Diamond.jsx';
-import SubmitedForm from './SubmitedForm.jsx'
+// import Logo from './assets/logo.png';
+import Form from './components/Form/form.jsx';
+import Silver from './components/Cards/Silver.jsx';
+import Gold from './components/Cards/Gold.jsx';
+import Platinum from './components/Cards/Platinum.jsx';
+import Diamond from './components/Cards/Diamond.jsx';
+import SubmitedForm from './components/Form/SubmitedForm.jsx'
 import {useState} from "react";
 function App() {
 
@@ -18,18 +18,17 @@ function App() {
     setShowSuccess (true)
   }
 
-  const handleBack = () => {
-    window.history.back()
-  }
+  // const handleBack = () => {
+  //   window.history.back()
+  // }
 
 const hash = window.location.hash
 
 
   return (
 
-    <>
     <div>
-    
+
 
 
       <div className="review-head d-none d-lg-block">
@@ -46,10 +45,10 @@ const hash = window.location.hash
 
 
               <div className="col-xl-5 col-lg-5">
-              {hash == '#silver' ? <Silver />: null}
-              {hash == '#gold' ? <Gold />: null}
-              {hash == '#platinum' ? <Platinum />: null}
-              {hash == '#diamond' ? <Diamond />: null}
+              {hash === '#silver' ? <Silver />: null}
+              {hash === '#gold' ? <Gold />: null}
+              {hash === '#platinum' ? <Platinum />: null}
+              {hash === '#diamond' ? <Diamond />: null}
               </div>
 
 
@@ -79,10 +78,10 @@ const hash = window.location.hash
 
 
                     <div className="col-md-12">
-                    {hash == '#silver' ? <Silver />: null}
-                    {hash == '#gold' ? <Gold />: null}
-                    {hash == '#platinum' ? <Platinum />: null}
-                    {hash == '#diamond' ? <Diamond />: null}
+                    {hash === '#silver' ? <Silver />: null}
+                    {hash === '#gold' ? <Gold />: null}
+                    {hash === '#platinum' ? <Platinum />: null}
+                    {hash === '#diamond' ? <Diamond />: null}
                     </div>
 
 
@@ -98,8 +97,6 @@ const hash = window.location.hash
 
                   </div>
       </div>
-
-    </>
   );
 }
 
