@@ -5,6 +5,7 @@ const defaultState = {
   fname: "",
   lname: "",
   root_phone: "",
+  email: "",
   street_number: "",
   city: "",
   state: "",
@@ -14,10 +15,10 @@ const defaultState = {
 
 function InputField(props) {
 
-  const { id, handleChange, placeholder } = props;
+  const { id, handleChange, placeholder, type } = props;
   return (
     <div className="afi FormInput Fifty">
-      <input type="text" id={id} onChange={handleChange} placeholder={placeholder}/>
+      <input type={type ? type : "text"} id={id} onChange={handleChange} placeholder={placeholder}/>
     </div>
   )
 }
@@ -41,6 +42,13 @@ export default function Form (props) {
     handleSubmit (state)
   }
 
+  const handleDate= (datetime) => {
+    console.log(datetime);
+    setState({
+      ...state,
+      datetime: datetime.toDate(),
+    })
+  }
 
   return (
     <form>
@@ -60,6 +68,12 @@ export default function Form (props) {
         id="root_phone"
         handleChange={handleChange}
         placeholder="Phone Number"
+      />
+      <InputField
+        id="email"
+        handleChange={handleChange}
+        placeholder="Email"
+        type="email"
       />
 
       <span className="FormText">Shoot Location</span>
@@ -89,12 +103,13 @@ export default function Form (props) {
 
       <div className="FormInput">
         <Datetime
+          onChange={handleDate}
           inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM'}}
         />
       </div>
 
       <div className="FormSubmit">
-        <button onClick={handleClick}>Submit</button>
+        <button type="submit" onClick={handleClick}>Submit</button>
       </div>
 
       {showSuccess && <span className="FormTextSubmitted">Your shoot has been booked!</span>}

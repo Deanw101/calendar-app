@@ -4,11 +4,15 @@ const compression = require('compression');
 const RateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const morgan = require('morgan');
-
+const nodemailer = require('nodemailer');
 
 const PORT = process.env.PORT || 3001
 
 const app = express();
+
+// Set env variables in dev env
+if (app.get('env') === 'development') require('dotenv').config();
+
 
 // rate limit config
 var apiLimiter = new RateLimit({
@@ -16,6 +20,19 @@ var apiLimiter = new RateLimit({
   max: 1000, // limit each IP to 1000 requests
   delayMs: 0 // disabled until limit is met
 });
+
+// nodemailer setup
+
+const transporter = nodemailer.createTransport({
+  port: 465,
+  host: "smtp.gmail.com",
+  auth: {
+    user: 'deansguis@gmail.com',
+    pass: process.env.EMAIL_PASS,
+  },
+  secure: true,
+});
+
 
 // middleware
 app.use(compression());
@@ -32,7 +49,27 @@ app.post('/api/schedulerequest', async (req, res) => {
 
     console.log('Schedule Reqest:', req.body);
 
-    res.status(201).json({ received: true });
+    const { fname, lname, root_phone, email, street_number, city,
+    state, postal_code, datetime } = req.body;
+
+    const mailData = {
+      from: 'deansguis@gmail.com',  // sender address
+      to: email,   // list of receivers
+      subject: 'Sending Email using Node.js',
+      text: 'That was easy!',
+      html: `<b>Hey there! </b>
+      <br> This is our first message sent with Nodemailer<br/>`,
+    };
+
+    transporter.sendMail(mailData, function (err, info) {
+       if(err) {
+         throw err
+       } else {
+         console.log(info);
+         res.status(201).json({ received: true });
+       }
+    });
+
 
   } catch (e) {
 
