@@ -26,6 +26,7 @@ export default function Form (props) {
   const {handleSubmit} = props;
 
   const [state, setState] = useState (defaultState);
+    const [showSuccess, setShowSuccess] = useState (false);
 
   const handleChange = (event) => {
     setState ({
@@ -36,6 +37,7 @@ export default function Form (props) {
 
   const handleClick = (event) => {
     event.preventDefault ()
+    setShowSuccess (true)
     handleSubmit (state)
   }
 
@@ -61,7 +63,7 @@ export default function Form (props) {
       />
 
       <span className="FormText">Shoot Location</span>
-      
+
       <InputField
         id="street_number"
         handleChange={handleChange}
@@ -94,6 +96,12 @@ export default function Form (props) {
       <div className="FormSubmit">
         <button onClick={handleClick}>Submit</button>
       </div>
+
+      {showSuccess && <span className="FormTextSubmitted">Your shoot has been booked!</span>}
+      {showSuccess && <button className="backTo" onClick={(e) => window.open('https://deanwithers.com/bookings.html', '_self')}>
+      Back to Bookings
+      </button>}
+
 
     </form>
 
