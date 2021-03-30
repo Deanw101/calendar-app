@@ -105,7 +105,7 @@ color: rgba(255,255,255,0.9); font-weight: 600
 }
 .review-head-mobile {
 position: relative;
-height: 1500px;
+height: 1900px;
 overflow: hidden;
 /* / z-index: -3;  */
 background-color:white!important;
@@ -329,6 +329,40 @@ position: relative;
       transform: translateY(50%)!important;
   }
 }
+
+/* @media only screen and (max-width: 600px) { */
+
+  /* .sbcontainer .sbcard {
+  top: 20%;
+  position: relative;
+  width: 280px;
+  height: 360px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+              inset -5px -5px -15px rgba(255,255,255,0.1),
+              5px 5px 15px rgba(0,0,0,0.3),
+              -5px -5px -15px rgba(255,255,255,0.1);
+              border-radius: 15px;
+              margin: 30px;
+                  z-index: 9999;
+                  box-sizing: border-box;
+  }
+
+  .sreview-text-back {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+    left: 50%;
+    width: 90%;
+    top: 50vh;
+   z-index: 0;
+  } */
+
+
+/* } */
 
 .bcontainer .bcard {
 top: 20%;

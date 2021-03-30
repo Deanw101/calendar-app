@@ -90,32 +90,32 @@ export default function PackageCard (props) {
 
     <div className="silver-mobile d-md-block d-lg-none">
 
-    <div className="bcontainer">
-    <div className="bcard">
-      <div className={'bbox ' + box}>
-        <div className={'bcontent ' + content}>
-          <h2>{number}</h2>
-          <h3>{name}</h3>
-          <p>
-            <span className="exBold">{persons} </span>
-            Person(s)
-            {"\n"}
-            <span className="exBold">{mins} </span>
-            Minute Session
-            {"\n"}
-            <span className="exBold">{images} </span>
-            Digital Images
-            {"\n"}
-            <span className="exBold">{editing} </span>
-            Digital Editing
-            {"\n"}
-            <span className="exBold">${price}</span>
-          </p>
+        <div className="bcontainer">
+        <div className="bcard">
+          <div className={'bbox ' + box}>
+            <div className={'bcontent ' + content}>
+              <h2>{number}</h2>
+                <h3>{name}</h3>
+                  <p>
+                    <span className="exBold">{persons} </span>
+                    Person(s)
+                    {"\n"}
+                    <span className="exBold">{mins} </span>
+                    Minute Session
+                    {"\n"}
+                    <span className="exBold">{images} </span>
+                    Digital Images
+                    {"\n"}
+                    <span className="exBold">{editing} </span>
+                    Digital Editing
+                    {"\n"}
+                    <span className="exBold">${price}</span>
+                  </p>
 
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    </div>
     </div>
 
     </>
