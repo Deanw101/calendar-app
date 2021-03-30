@@ -216,7 +216,7 @@ a[x-apple-data-detectors='true'] {
       <td style="overflow-wrap:break-word;word-break:break-word;padding:25px 20px 15px;font-family:arial,helvetica,sans-serif;" align="left">
 
   <div style="color: #000000; line-height: 140%; text-align: left; word-wrap: break-word;padding-top:10px;">
-    <p style="font-size: 14px; line-height: 140%; text-align: right;"><span style="font-size: 16px; line-height: 22.4px; padding-top:35%; font-weight:600; color: #4a4a4a">DEANWITHERS</span></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: right;"><span style="font-size: 16px; line-height: 22.4px; padding-top:35%; font-weight:600; color: #4a4a4a">${fname} ${lname}</span></p>
   </div>
 
       </td>
