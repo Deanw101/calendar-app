@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/dt.css';
 import './App.css';
+import './assets/Menu.css';
 // import Logo from './assets/logo.png';
 import axios from 'axios';
 import Form from './components/Form/form.jsx';
@@ -33,8 +34,6 @@ function App() {
   return (
 
     <div>
-
-
 
       <div className="review-head d-none d-lg-block">
 
