@@ -24,13 +24,13 @@ var apiLimiter = new RateLimit({
 // nodemailer setup
 
 const transporter = nodemailer.createTransport({
-  port: 465,
-  host: "smtp.gmail.com",
+  port: 587,
+  host: "smtp.office365.com",
   auth: {
-    user: 'deansguis@gmail.com',
+    user: 'deanwithersphotography@outlook.com',
     pass: process.env.EMAIL_PASS,
   },
-  secure: true,
+  secure: false,
 });
 
 
@@ -53,7 +53,7 @@ app.post('/api/schedulerequest', async (req, res) => {
     state, postal_code, datetime } = req.body;
 
     const mailData = {
-      from: 'deansguis@gmail.com',  // sender address
+      from: 'deanwithersphotography@outlook.com',  // sender address
       to: email,
       subject: 'Photoshoot Confirmation!',
       text: 'That was easy!',
