@@ -123,7 +123,7 @@ export default function Form (props) {
     type="button"
     onClick={(e) => {
       e.preventDefault();
-      window.location.href='https://deanwithers.com/bookings';
+      window.location.href='https://deanwithers.com/bookings.html';
       }}
 > Return to Bookings</button>
   </div> }
