@@ -111,15 +111,26 @@ export default function Form (props) {
           inputProps={{ placeholder: 'MM/DD/YYYY 00:00 AM/PM'}}
         />
       </div>
+      <div className="row clearb">
 
       <div className="FormSubmit">
         <button type="submit">Submit</button>
       </div>
 
-      {showSuccess && <span className="FormTextSubmitted">Your shoot has been booked!</span>}
-      {showSuccess && <button className="backTo" onClick={(e) => window.open('https://deanwithers.com/bookings.html', '_self')}>
-      Back to Bookings
-      </button>}
+      {showSuccess &&
+         <div className="FormReturn ml-auto">
+         <button
+    type="button"
+    onClick={(e) => {
+      e.preventDefault();
+      window.location.href='https://deanwithers.com/bookings';
+      }}
+> Return to Bookings</button>
+  </div> }
+</div>
+     <div className="">
+{showSuccess && <span className="FormTextSubmitted">Your shoot has been booked!</span>}
+    </div>
 
 
     </form>

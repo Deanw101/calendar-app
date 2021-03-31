@@ -93,23 +93,34 @@ color: rgba(255,255,255,0.9); font-weight: 600
 
 .review-head {
   position: relative;
-  height: 150vh;
-  overflow: hidden;
+  height: 130vh;
+  overflow: auto;
   /* / z-index: -3;  */
   background-color:white!important;
-
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.review-head::-webkit-scrollbar {
+    display: none;
+}
+
 
 .review-head .container {
   position: relative;
 }
 .review-head-mobile {
 position: relative;
-height: 1900px;
-overflow: hidden;
+height: 1600px;
+overflow: auto;
 /* / z-index: -3;  */
 background-color:white!important;
+-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
 
+.review-head-mobile::-webkit-scrollbar {
+    display: none;
 }
 
 .review-head .container {
@@ -280,7 +291,7 @@ position: relative;
 .FormTextSubmitted {
   padding-bottom: 10px;
   color: green;
-  padding-left:20px;
+  /* padding-left:10px; */
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -288,6 +299,22 @@ position: relative;
 .FormSubmit {
   padding-left: 20px;
   padding-bottom: 20px;
+  float:left;
+
+}
+
+.FormReturn {
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+}
+
+input.FormReturn {
+    float:right!imortant;
+}
+
+.clearb {
+  clear: both;
 }
 .FormSubmit button {
 
@@ -303,6 +330,22 @@ position: relative;
  text-align:center;
 
 }
+
+.FormReturn button {
+
+  color: #000;
+  background-color: #FFF;
+  border: 0.1em solid #000;
+  border-radius:0.12em;
+  padding:0.7em 1.2em;
+ margin:0 0.3em 0.3em 0;
+ box-sizing: border-box;
+ text-decoration:none;
+ font: 700 13px Arial;
+ text-align:center;
+float:right!imortant;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -326,7 +369,7 @@ position: relative;
 
 @media only screen and (min-width: 991px) {
   .bcontainer {
-      transform: translateY(50%)!important;
+      transform: translateY(37vh)!important;
   }
 }
 
@@ -379,6 +422,23 @@ box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
                 box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+  .bcontainer .bcard {
+  top: 20%;
+  position: relative;
+  min-width: 300px;
+  height: 300px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+              inset -5px -5px -15px rgba(255,255,255,0.1),
+              5px 5px 15px rgba(0,0,0,0.3),
+              -5px -5px -15px rgba(255,255,255,0.1);
+              border-radius: 15px;
+              margin: 30px;
+                  z-index: 9999;
+                  box-sizing: border-box;
+  }
+
+}
 
 
 .bcontainer .bcard .bbox {
@@ -511,3 +571,7 @@ box-shadow: 0 20px 50px rgba(0,0,0,0.5)!important;
             .bcontainer .bcard:nth-child(2) .bbox .bcontent a{
               background: #e91e63
               }
+
+body {
+  padding-bottom: 50px;
+}
