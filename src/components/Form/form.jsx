@@ -15,10 +15,10 @@ const defaultState = {
 
 function InputField(props) {
 
-  const { id, handleChange, placeholder, type } = props;
+  const { id, handleChange, placeholder, type, required} = props;
   return (
     <div className="afi FormInput Fifty">
-      <input type={type ? type : "text"} id={id} onChange={handleChange} placeholder={placeholder}/>
+      <input type={type ? type : "text"} id={id} onChange={handleChange} placeholder={placeholder} required={required}/>
     </div>
   )
 }
@@ -51,29 +51,33 @@ export default function Form (props) {
   }
 
   return (
-    <form>
+    <form onSubmit={handleClick}>
       <span className="FormText">Your Details</span>
 
       <InputField
         id="fname"
         handleChange={handleChange}
         placeholder="First Name"
+        required
       />
       <InputField
         id="lname"
         handleChange={handleChange}
         placeholder="Last Name"
+        required
       />
       <InputField
         id="root_phone"
         handleChange={handleChange}
         placeholder="Phone Number"
+        required
       />
       <InputField
         id="email"
         handleChange={handleChange}
         placeholder="Email"
         type="email"
+        required
       />
 
       <span className="FormText">Shoot Location</span>
@@ -109,7 +113,7 @@ export default function Form (props) {
       </div>
 
       <div className="FormSubmit">
-        <button type="submit" onClick={handleClick}>Submit</button>
+        <button type="submit">Submit</button>
       </div>
 
       {showSuccess && <span className="FormTextSubmitted">Your shoot has been booked!</span>}
