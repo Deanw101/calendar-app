@@ -54,7 +54,7 @@ app.post('/api/schedulerequest', async (req, res) => {
 
     const mailData = {
       from: 'deansguis@gmail.com',  // sender address
-      to: email,   // list of receivers
+      to: email,
       subject: 'Photoshoot Confirmation!',
       text: 'That was easy!',
       html: `
