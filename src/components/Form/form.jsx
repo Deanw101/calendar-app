@@ -46,7 +46,7 @@ export default function Form (props) {
     console.log(datetime);
     setState({
       ...state,
-      datetime: datetime.toDate(),
+      datetime: datetime.toLocaleString(),
     })
   }
 
